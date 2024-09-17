@@ -11,20 +11,32 @@ namespace Movies
     {
         public string title;
         public string director;
-        public string rating;
+        private string rating;
 
         public Movie_Class(string title, string director, string rating)
         {
             this.title = title;
             this.director = director;
-            this.rating = rating;
+            this.Rating = rating;
         }
 
-        //public Movie_Class(string aTitle, string aDirector, string aRating)
-        //{
-        //    title = aTitle;
-        //    director = aDirector;
-        //    rating = aRating;
-        //}
+        public string Rating
+        {
+            get { return this.rating; }
+
+            set
+            {
+                if (value == "G" || value == "PG" || value == "GP-13" || value == "R" || value == "NR")
+                {
+                    this.rating = value;
+                }
+                else
+                {
+                    this.rating = "NR";
+                }
+            }
+        }
+
+
     }
 }

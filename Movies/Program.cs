@@ -4,8 +4,12 @@
 // G, PG, PG-13, R, NR
 
 
-Movie_Class shrek = new("Shrek", "Rejisori2", "PG");
+var shrek = new Movie_Class("Shrek", "Rejisori2", "PG");
 
 shrek.Rating = "ADWFAWF";
 
+
 Console.WriteLine(shrek.title + " " + shrek.director + " " + shrek.Rating);
+Console.WriteLine(Movie_Class.movieCount);
+
+

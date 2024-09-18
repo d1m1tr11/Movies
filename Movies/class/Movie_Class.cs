@@ -12,12 +12,15 @@ namespace Movies
         public string title;
         public string director;
         private string rating;
+        public static int movieCount = 0;
 
         public Movie_Class(string title, string director, string rating)
         {
             this.title = title;
             this.director = director;
-            this.Rating = rating;
+            Rating = rating;
+            movieCount++;
+
         }
 
         public string Rating
